@@ -22,7 +22,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
+    public ResponseEntity<AuthResponse> register(@Valid @RequestBody RegisterRequest request) {
         User user = userService.registerUser(request);
         String token = jwtTokenProvider.createToken(user.getId(), user.getEmail(), user.getRoles());
         AuthResponse response = new AuthResponse(token, user.getId(), user.getEmail(), user.getRoles());
@@ -30,7 +30,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
+    public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         User user = userService.loginUser(request);
         String token = jwtTokenProvider.createToken(user.getId(), user.getEmail(), user.getRoles());
         AuthResponse response = new AuthResponse(token, user.getId(), user.getEmail(), user.getRoles());
