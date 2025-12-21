@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.example</groupId>
-    <artifactId>warranty-claim-fraud-detector</artifactId> <!-- Changed from hotel... -->
+    <artifactId>warranty-claim-fraud-detector</artifactId>
     <version>1.0.0</version>
     <name>Warranty Claim Fraud Detector</name>
     <description>Spring Boot application for detecting fraudulent warranty claims</description>
@@ -19,7 +19,10 @@
     </parent>
 
     <properties>
-        <java.version>21</java.version>
+        <!-- ✅ Changed from 21 to 17 -->
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
