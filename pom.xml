@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.example</groupId>
-    <artifactId>hotel-room-key-digital-share</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>hotel-room-key-digital-share</name>
-    <description>Hotel Room Key Digital Share Application</description>
+    <artifactId>warranty-claim-fraud-detector</artifactId> <!-- Changed from hotel... -->
+    <version>1.0.0</version>
+    <name>Warranty Claim Fraud Detector</name>
+    <description>Spring Boot application for detecting fraudulent warranty claims</description>
     
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -59,13 +59,6 @@
             <scope>runtime</scope>
         </dependency>
         
-        <!-- H2 Database for testing -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        
         <!-- MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -80,6 +73,7 @@
             <version>2.2.0</version>
         </dependency>
         
+        <!-- Test Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
