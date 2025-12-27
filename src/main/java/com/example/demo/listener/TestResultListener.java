@@ -1,13 +1,24 @@
 package com.example.demo.listener;
 
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
-
-@Component
 public class TestResultListener {
     
-    @EventListener
-    public void handleTestResult(Object event) {
-        // Handle test result events if needed
+    public TestResultListener() {
+        // Default constructor
+    }
+    
+    public void onTestStart(Object result) {
+        System.out.println("Test started");
+    }
+    
+    public void onTestSuccess(Object result) {
+        System.out.println("Test passed");
+    }
+    
+    public void onTestFailure(Object result) {
+        System.out.println("Test failed");
+    }
+    
+    public void onTestSkipped(Object result) {
+        System.out.println("Test skipped");
     }
 }
